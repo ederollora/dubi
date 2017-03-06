@@ -54,7 +54,7 @@ then
     output=$(onos-app localhost install $filePath)
     if grep -q "\"state\":\"INSTALLED\"" <<< "$output";
     then
-      echo -e "[SUCCESS] - Installation sucessful -> INSTALLED keyword found"
+      echo -e "[SUCCESS] - Installation successful -> INSTALLED keyword found"
     else
       echo -e "[ERROR] - There was an error with the .oar file installation"
       echo -e "[ERROR] - Refer to the following output:"
@@ -79,7 +79,7 @@ then
       output=$(onos-app localhost install ${PWD}/target/${files[$((num-1))]})
       if grep -q "\"state\":\"INSTALLED\"" <<< "$output";
       then
-        echo -e "[SUCCESS] - Installation sucessful -> INSTALLED keyword found"
+        echo -e "[SUCCESS] - Installation successful -> INSTALLED keyword found"
       else
         echo -e "[ERROR] - There was an error with the .oar file installation"
         echo -e "[ERROR] - Refer to the following output:"
