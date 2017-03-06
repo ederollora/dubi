@@ -9,7 +9,7 @@ The acronym stands for Maven Clean Install Onos. It wraps the commands `maven cl
 * Karaf (Tested with version 3.0.5)
 * Oracle Java 8
 
-Make sure **$JAVA_HOME** is properly set and that the file **bash_profile** included in the cloned onos folder has been sourced (in 1.7.0 -> $ONOS_ROOT/tools/dev/bash_profile). This is important because without adding the **bash_profile** commands like `mvn` or `onos-app` would not be recognized:
+Make sure **$JAVA_HOME** is properly set and that the file **bash_profile** included in the cloned onos folder has been sourced (in 1.7.0 -> $ONOS_ROOT/tools/dev/bash_profile). This is important because without adding the **bash_profile**, commands like `mvn` or `onos-app` would not be recognized:
 
 ## Getting started
 
@@ -53,11 +53,11 @@ Successfull:
 
 user@machine:~/onos_apps/myapp$ mcio
 
-> [INFO] - Searching for the pom.xml file in the current directory
-> [INFO] - pom.xml found, continuing with the process
-> [INFO] - Running: $ mvn clean install -DskipTests
-> [building] /\n
-> [SUCCESS] - Build status -> Correct
-> [SUCCESS] - Message      -> [INFO] BUILD SUCCESS
-> [INFO] - Continuing with OAR file installation
-> [SUCCESS] - Installation successful -> INSTALLED keyword found`
+> [INFO] - Searching for the pom.xml file in the current directory  
+> [INFO] - pom.xml found, continuing with the process  
+> [INFO] - Running: $ mvn clean install -DskipTests  
+> [building] /\n  
+> [SUCCESS] - Build status -> Correct  
+> [SUCCESS] - Message      -> [INFO] BUILD SUCCESS  
+> [INFO] - Continuing with OAR file installation  
+> [SUCCESS] - Installation successful -> INSTALLED keyword found`  
