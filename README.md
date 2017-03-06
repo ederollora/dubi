@@ -25,9 +25,9 @@ Open bashrc file:
 ```bash
 nano ~/.bashrc
 ```
-Go to the end of the file and append:
+Go to the end of the file and append (considering you cloned it in your home directory):
 ```bash
-alias mcio='/home/user/mcio/mcio.sh' (considering you cloned it in your home directory)
+alias mcio='/home/user/mcio/mcio.sh'
 ```
 Close it, save it and source the file:
 ```bash
@@ -43,7 +43,7 @@ chmod +x /home/user/mcio/mcio.sh
 
 To run the script just go to your ONOS app directory (where you typed onos-create-app), the pom.xml file should be there:
 ```bash
-cd /home/user/my-onos-app/`
+cd /home/user/my-onos-app/
 mcio
 ```
 
