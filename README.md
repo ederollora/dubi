@@ -1,6 +1,6 @@
-# MCIO
+# ONOS DUBI
 
-The acronym stands for Maven Clean Install Onos. It wraps the commands `maven clean install` and `onos-app install` together to execute them and track their status. It builds you own ONOS application and install it on the controller
+The acronym stands for ONOS APP Deactivate, Uninstall, Build & Install. It wraps the commands `onos-app deactivate`, `onos-app uninstall`, `maven clean install` and `onos-app install` together to execute them and track their status. It deactivates and unistall of your app. Then it builds you own ONOS application and install it on the controller.
 
 ## Requirements
 
@@ -9,14 +9,14 @@ The acronym stands for Maven Clean Install Onos. It wraps the commands `maven cl
 * Karaf (Tested with version 3.0.5)
 * Oracle Java 8
 
-Make sure **$JAVA_HOME** is properly set and that the file **bash_profile** included in the cloned onos folder has been sourced (in 1.7.0 -> $ONOS_ROOT/tools/dev/bash_profile). This is important because without adding the **bash_profile**, commands like `mvn` or `onos-app` would not be recognized:
+Make sure **$JAVA_HOME** is properly set and that the file **bash_profile** included in the cloned onos folder has been sourced (in 1.7.0 -> $ONOS_ROOT/tools/dev/bash_profile). This is important because without adding the **bash_profile**, commands like `mvn` or `onos-app` would not be recognized. The app has also been tested with onos 1.13.0. 
 
 ## Getting started
 
 To get a copy of the project you should run:
 
 ```bash
-git clone https://github.com/ederollora/mcio.git
+git clone https://github.com/ederollora/dubi.git
 ```
 
 Once the repository has been cloned, I would suggest to create and alias for the script. You can see where the script resides by running `pwd` inside the directory that contains script. Add the directory (appending the file to it) to the **bashrc** file in your home directory. Finally give mcio.sh **execution permissions**:
@@ -27,7 +27,7 @@ nano ~/.bashrc
 ```
 Go to the end of the file and append (considering you cloned it in your home directory):
 ```bash
-alias mcio='/home/user/mcio/mcio.sh'
+alias dubi='/home/user/dubi/dubi.sh'
 ```
 Close it, save it and source the file:
 ```bash
@@ -36,7 +36,7 @@ source ~/.bashrc
 
 Add execution permissions to the original script:
 ```bash
-chmod +x /home/user/mcio/mcio.sh
+chmod +x /home/user/dubi/dubi.sh
 ```
 
 ## Usage
@@ -44,20 +44,21 @@ chmod +x /home/user/mcio/mcio.sh
 To run the script just go to your ONOS app directory (where you typed onos-create-app), the pom.xml file should be there:
 ```bash
 cd /home/user/my-onos-app/
-mcio
+dubi
 ```
 
 ## Output
 
-Successfull:
+It should look like this:
 
 user@machine:~/onos_apps/myapp$ mcio
 
-> [INFO] - Searching for the pom.xml file in the current directory  
-> [INFO] - pom.xml found, continuing with the process  
-> [INFO] - Running: $ mvn clean install -DskipTests  
-> [building] /\n  
-> [SUCCESS] - Build status -> Correct  
-> [SUCCESS] - Message      -> [INFO] BUILD SUCCESS  
-> [INFO] - Continuing with OAR file installation  
-> [SUCCESS] - Installation successful -> INSTALLED keyword found`  
+> [INFO] - Searching for the pom.xml file in the current directory
+> [POM FILE] - FOUND
+> [APP NAME] - FOUND: org.student.lb
+> [APP DEACTIVATE] - TRYING TO DEACTIVATE IF org.student.lb IS ACTIVATED
+> [APP UNINSTALL] - TRYING TO UNINSTALL IF org.student.lb IS INSTALLED
+> [APP BUILD] - TRYING TO BUILD THE org.student.lb APP
+> [APP BUILD] - org.student.lb BUILD WAS SUCCESSFUL
+> [APP BUILD] - MESSAGE  -> [INFO] BUILD SUCCESS
+> [APP BUILD] - INSTALLATION OF org.student.lb WAS SUCCESFUL
