@@ -1,6 +1,6 @@
 # ONOS DUBI
 
-The acronym stands for ONOS APP Deactivate, Uninstall, Build & Install. It wraps the commands `onos-app deactivate`, `onos-app uninstall`, `maven clean install` and `onos-app install` together to execute them and track their status. It deactivates and unistall of your app. Then it builds you own ONOS application and install it on the controller.
+The acronym stands for ONOS APP Deactivate, Uninstall, Build & Install. It wraps the commands `onos-app deactivate`, `onos-app uninstall`, `maven clean install` and `onos-app install` together to execute them according to your app's name (extracted from pom.xml). It deactivates and uninstall of your app. Then it builds the application and installs it in the controller.
 
 ## Requirements
 
